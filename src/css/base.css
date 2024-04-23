@@ -1,9 +1,8 @@
 @import "@fontsource/work-sans";
 @import "@fontsource/work-sans/600";
 @import "@fontsource/work-sans/700";
-@import "@fontsource/paytone-one"; 
+@import "@fontsource/paytone-one";
 @import "@fontsource/work-sans/600";
-
 
 * {
   box-sizing: border-box;
@@ -52,8 +51,8 @@ img {
 }
 
 :root {
-  --light: #ffffff;
-  --dark: #100f1b;
+  --background: #ffffff;
+  --accent: #100f1b;
   --text: #696973;
 
   --primary-50: #e5e3f3;
@@ -93,9 +92,9 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
-  color: var(--dark);
+  color: var(--accent);
 
-  background-color: var(--light);
+  background-color: var(--background);
 }
 
 button,
