@@ -19,5 +19,4 @@ module.exports = {
   singleQuote: false,
   printWidth: 80,
   useTabs: false,
-  endOfLine: "crlf",
 };
