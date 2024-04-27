@@ -133,3 +133,24 @@ input.btn {
 .underline-hover:hover {
   text-decoration: underline;
 }
+
+@media screen and (max-width: 650px) {
+  .form {
+    min-width: 15rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .form {
+    min-width: 15rem;
+    padding: 2rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .form {
+    background: none;
+    border-radius: 0rem;
+    box-shadow: none;
+    padding: 1rem;
+  }
+}

@@ -16,11 +16,12 @@
 </script>
 
 <div class="form">
-  <div class="title">
-    <p>Crea una cuenta</p>
-  </div>
-
   <form on:submit|preventDefault={handleSubmit}>
+    <div class="title">
+      <h2>¡Bienvenido a "Aventuras del Habla"!</h2>
+      <p>Crea una cuenta</p>
+    </div>
+
     <div class="item-input">
       <label for="email">Correo:</label>
       <input type="email" id="email" bind:value={emailInput} />
@@ -38,36 +39,36 @@
       />
     </div>
     <input class="btn" type="submit" value="Registrar" />
+
+    {#if error}
+      <div class="error">{error}</div>
+    {/if}
+    {#if message}
+      <div class="message">{message}</div>
+    {/if}
+
+    <div class="container-sign-with">
+      <div class="title">
+        <div />
+        <p class="small-text">O ingresa con</p>
+        <div />
+      </div>
+      <div class="list-social">
+        <button class="sign-with google">
+          <Google />
+        </button>
+      </div>
+      <svg height="10" width="100%">
+        <line
+          x1="0"
+          y1="0"
+          x2="100%"
+          y2="0"
+          style="stroke:var(--primary-300);stroke-width:2"
+        />
+      </svg>
+    </div>
   </form>
-
-  {#if error}
-    <div class="error">{error}</div>
-  {/if}
-  {#if message}
-    <div class="message">{message}</div>
-  {/if}
-
-  <div class="container-sign-with">
-    <div class="title">
-      <div />
-      <p class="small-text">O ingresa con</p>
-      <div />
-    </div>
-    <div class="list-social">
-      <button class="sign-with google">
-        <Google />
-      </button>
-    </div>
-    <svg height="10" width="100%">
-      <line
-        x1="0"
-        y1="0"
-        x2="100%"
-        y2="0"
-        style="stroke:var(--primary-300);stroke-width:2"
-      />
-    </svg>
-  </div>
 
   <div class="footer-form">
     <div class="flex-row-text">
@@ -78,17 +79,23 @@
 </div>
 
 <style>
-  /* Estilos para pantallas más pequeñas (menor de 650px) */
-  @media screen and (max-width: 650px) {
-    .form {
-      min-width: 15rem;
-    }
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0rem;
+    text-align: center;
   }
 
-  @media screen and (max-width: 650px) {
-    .form {
-      min-width: 15rem;
-      padding: 2rem;
-    }
+  .container-sign-with .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: normal;
   }
 </style>
