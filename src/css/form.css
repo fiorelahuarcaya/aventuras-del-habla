@@ -48,7 +48,7 @@ form .item-input {
   width: 100%;
 }
 
-.item-input input ,
+.item-input input,
 .item-input select {
   background: var(--primary-50);
   border-radius: 4px;
@@ -59,8 +59,8 @@ form .item-input {
   color: var(--text-primary);
 }
 
-.item-input input:focus ,
-.item-input select:focus{
+.item-input input:focus,
+.item-input select:focus {
   outline: solid 1px var(--primary-400);
 }
 
@@ -116,12 +116,12 @@ input.btn {
 }
 
 form .error,
-form .message{
+form .message {
   width: 100%;
-  text-align: center;  
+  text-align: center;
 }
 
-form .error{
+form .error {
   color: #a10d00;
   font-weight: 600;
 }
