@@ -48,7 +48,8 @@ form .item-input {
   width: 100%;
 }
 
-.item-input input {
+.item-input input,
+.item-input select {
   background: var(--primary-50);
   border-radius: 4px;
   height: 32px;
@@ -58,7 +59,8 @@ form .item-input {
   color: var(--text-primary);
 }
 
-.item-input input:focus {
+.item-input input:focus,
+.item-input select:focus {
   outline: solid 1px var(--primary-400);
 }
 
@@ -113,6 +115,17 @@ input.btn {
   background-color: #a10d00;
 }
 
+form .error,
+form .message {
+  width: 100%;
+  text-align: center;
+}
+
+form .error {
+  color: #a10d00;
+  font-weight: 600;
+}
+
 .form .footer-form {
   display: flex;
   flex-direction: column;
@@ -122,6 +135,7 @@ input.btn {
   font-size: 0.75rem;
   font-style: normal;
   font-weight: 300;
+  width: 100%;
 }
 
 .flex-row-text {
@@ -132,4 +146,25 @@ input.btn {
 
 .underline-hover:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 650px) {
+  .form {
+    min-width: 15rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .form {
+    min-width: 15rem;
+    padding: 2rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .form {
+    background: none;
+    border-radius: 0rem;
+    box-shadow: none;
+    padding: 1rem;
+  }
 }

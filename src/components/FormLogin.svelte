@@ -65,32 +65,10 @@
   <div class="footer-form">
     <div class="flex-row-text">
       <p>¿Aún no tiene una cuenta?</p>
-      <a href="/pacient/register" class="underline-hover">Regístrese</a>
+      <a href="/register" class="underline-hover">Regístrese</a>
     </div>
   </div>
 </div>
 
 <style>
-  /* Estilos para pantallas más pequeñas (menor de 650px) */
-  @media screen and (max-width: 650px) {
-    .form {
-      min-width: 15rem;
-    }
-  }
-
-  @media screen and (max-width: 650px) {
-    .form {
-      min-width: 15rem;
-      padding: 2rem;
-    }
-  }
-
-  @media screen and (max-width: 375px) {
-    .form {
-      background: none;
-      border-radius: 0rem;
-      box-shadow: none;
-      padding: 1rem;
-    }
-  }
 </style>
