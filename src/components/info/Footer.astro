@@ -1,0 +1,85 @@
+---
+import Logo from "../svgs/Logo.astro";
+---
+
+<footer>
+  <div class="wrapper">
+    <div class="column">
+      <h4>Conócenos</h4>
+      <ul>
+        <li><a href="#about-us">Nosotros</a></li>
+      </ul>
+    </div>
+    <div class="column">
+      <h4>Nuestros servicios</h4>
+      <ul>
+        <li><a href="/login">Inicio de Sesión</a></li>
+        <li><a href="/register">Regístrate</a></li>
+      </ul>
+    </div>
+    <div class="column">
+      <h4>Estamos para ayudarte</h4>
+      <ul>
+        <li>
+          Fiorela Huarcaya: <a href="mailto:fiorelahuarcayagonzales@gmail.com"
+            >fiorelahuarcayagonzales@gmail.com</a>
+        </li>
+        <li>
+          Gerson Zuñiga: <a href="mailto:gersonzuniga@uni.pe"
+            >gersonzuniga@uni.pe</a>
+        </li>
+      </ul>
+
+      <br />
+      <h4>NUESTRAS REDES</h4>
+      <div class="social-network"></div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    padding: 48px 0px;
+
+    background-color: var(--accent);
+    color: var(--background);
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+  }
+
+  .wrapper .column h4 {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: var(--primary-300);
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .wrapper .column ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    list-style: none;
+
+    font-weight: 200;
+
+    margin-top: 8px;
+  }
+
+  .wrapper .column ul li {
+    font-weight: 300;
+  }
+
+  ul li a {
+    font-weight: 500;
+  }
+
+  ul li a:hover {
+    font-weight: 700;
+  }
+</style>
