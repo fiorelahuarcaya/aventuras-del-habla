@@ -185,8 +185,8 @@ export type Database = {
       };
       EXERCISE: {
         Row: {
-          id_exercise: string;
-          id_practice: string;
+          id_exercise: number;
+          id_practice: number;
           order: number;
           text_repeat: string;
         };

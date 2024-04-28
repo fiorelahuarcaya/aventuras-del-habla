@@ -1,0 +1,107 @@
+---
+import ExcerciseList from "../../components/ExcerciseList.svelte";
+import Help from "../../components/svgs/Help.astro";
+import PatientLayout from "../../layouts/PatientLayout.astro";
+
+export async function getStaticPaths() {
+  // Crear un array vacío
+  let paths = [];
+
+  // Llenar el array con 500 objetos, cada uno con un ID desde '1' hasta '500'
+  for (let i = 1; i <= 500; i++) {
+    paths.push({ params: { id: `${i}` } });
+  }
+
+  return paths;
+}
+
+const { id } = Astro.params;
+const evaluationId = id ? parseInt(id) : 0;
+
+const evaluation = {
+  created_at: "2024-04-26T10:00:00Z",
+  evaluated_at: null, // Esto indica que la evaluación aún no ha sido completada
+  id_evaluation: 101,
+  id_child: 501,
+  id_practice: 301,
+};
+
+//TODO: Reemplazar por un await getById(id);
+
+const id_practice = evaluation ? evaluation.id_practice : 0;
+
+const exercices = [
+  {
+    id_exercise: 1,
+    id_practice: 1,
+    order: 1,
+    text_repeat: "Repeat this text first.",
+  },
+  {
+    id_exercise: 2,
+    id_practice: 1,
+    order: 2,
+    text_repeat: "Repeat this text second.",
+  },
+  {
+    id_exercise: 3,
+    id_practice: 1,
+    order: 3,
+    text_repeat: "Repeat this text third.",
+  },
+  {
+    id_exercise: 4,
+    id_practice: 1,
+    order: 4,
+    text_repeat: "Repeat this text fourth.",
+  },
+  {
+    id_exercise: 5,
+    id_practice: 1,
+    order: 5,
+    text_repeat: "Repeat this text fifth.",
+  },
+];
+//TODO: await getAllByPractice(id_practice);
+---
+
+<PatientLayout title="¡A practicar!">
+  <div class="wrapper">
+    <Help />
+    <ExcerciseList
+      client:load
+      exercices={exercices}
+      evaluationId={evaluationId}
+    />
+  </div>
+</PatientLayout>
+
+<style>
+  body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--primary-50);
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 4rem 0;
+    width: 100%;
+  }
+
+  .exercise {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .exercise.exercise-1 {
+    display: flex;
+  }
+</style>
