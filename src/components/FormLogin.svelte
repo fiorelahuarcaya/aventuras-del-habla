@@ -11,6 +11,10 @@
       error = "Por favor, llene todos los campos";
       return;
     }
+
+    // Aquí podrías incluir la lógica de autenticación o cualquier otra lógica de negocio.
+    // Si todo es correcto, redirigimos al usuario.
+    window.location.href = "/practice"; // Cambia la ruta a /practice
   }
 </script>
 
