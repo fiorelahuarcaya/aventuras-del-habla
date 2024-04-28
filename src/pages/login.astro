@@ -2,9 +2,11 @@
 import "../css/form.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import FormLogin from "../components/FormLogin.svelte";
+import MenuIndex from "../components/info/MenuIndex.astro";
 ---
 
 <BaseLayout title="Login">
+  <MenuIndex />
   <FormLogin client:load />
 </BaseLayout>
 

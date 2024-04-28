@@ -1,0 +1,96 @@
+---
+import Divider from "../svgs/Divider.astro";
+import DividerTop from "../svgs/DividerTop.astro";
+---
+
+<div class="hero">
+  <div class="wrapper">
+    <div class="text">
+      <h2>
+        Los trastornos del habla afectan la comunicación y la socialización de
+        miles de niños.
+      </h2>
+      <p>
+        La intervención temprana mediante ejercicios específicos puede mejorar
+        significativamente las habilidades del habla.
+      </p>
+
+      <a href="/register" class="btn">Regístrate</a>
+    </div>
+    <img src="/img/hero.png" alt="Niños jugando con la laptop" height="360px" />
+  </div>
+  <Divider />
+</div>
+
+<style>
+  .hero {
+    position: relative;
+    background-color: var(--primary-50);
+    /* padding-top: 32px; */
+    padding: 80px 0px;
+    margin-bottom: 32px;
+    z-index: 10;
+  }
+
+  .img-onda {
+    height: 100px;
+    width: 100%;
+  }
+
+  .hero .wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wrapper .text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: var(--text-gray);
+    max-width: 480px;
+  }
+
+  .text h2 {
+    color: var(--primary-900);
+
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  .text .btn {
+    background-color: var(--primary-600);
+    color: white;
+    font-weight: 600;
+
+    width: fit-content;
+    transition-property: color, background-color;
+    transition-duration: 0.3s;
+  }
+
+  .text .btn:hover {
+    background-color: var(--primary-500);
+    color: white;
+  }
+
+  /** RESPONSIVE **/
+  @media only screen and (max-width: 768px) {
+    .hero .wrapper img {
+      height: 160px;
+    }
+    .text h2 {
+      font-size: 30px;
+    }
+  }
+
+  @media only screen and (max-width: 650px) {
+    .hero .wrapper {
+      flex-direction: column;
+    }
+  }
+</style>
