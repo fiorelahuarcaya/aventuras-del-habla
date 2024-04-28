@@ -1,6 +1,6 @@
 import { supabase } from "../client";
 
-export const insertParentInfo = async (
+export const insertChildInfo = async (
   id_parent: string,
   birthdate: string,
   first_name: string,
