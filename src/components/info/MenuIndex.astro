@@ -1,0 +1,72 @@
+---
+import Logo from "../svgs/Logo.astro";
+
+const { pathname } = Astro.url;
+
+function isActiveRoute(route: string): string {
+  if (route === pathname) return "active";
+  if (pathname.startsWith(route) && route !== "/") return "active";
+  return "";
+}
+---
+
+<div class="menu">
+  <div class="wrapper">
+    <a href="/">
+      <Logo />
+    </a>
+    <div class="nav">
+      <div class="itemsMenu">
+        <a class={`bold-text item ${isActiveRoute("/")}`} href="/"> Inicio</a>
+        <a class={`bold-text item ${isActiveRoute("/login")}`} href="/login"
+          >Login</a
+        >
+        <a
+          class={`bold-text item ${isActiveRoute("/register")}`}
+          href="/register">Regístrate</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .menu {
+    display: flex;
+
+    width: 100%;
+    background-color: var(--primary-900);
+
+    padding: 16px 0px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .itemsMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+    color: var(--background);
+  }
+
+  .itemsMenu .item {
+    color: var(--light);
+  }
+
+  .itemsMenu .active {
+    color: var(--primary-200);
+    border-bottom: 4px solid var(--primary-200);
+  }
+
+  .itemsMenu a {
+    color: var(--light);
+  }
+</style>
