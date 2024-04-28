@@ -1,0 +1,63 @@
+---
+import Nav from "./Nav.astro";
+import Logo from "./svgs/Logo.astro";
+---
+
+<div class="menu">
+  <div class="up">
+    <Logo />
+    <Nav />
+  </div>
+  <div class="bottom">
+    <div class="item-menu">
+      <div class="avatar">
+        <img src="/img/avatar-patient.png" alt="Avatar" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .menu {
+    display: flex;
+    flex-direction: column;
+
+    display: flex;
+    padding: 2rem 2rem 3rem 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--primary-800);
+    color: var(--light);
+  }
+
+  .menu .up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .menu .bottom {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3rem;
+  }
+
+  .item-menu {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .item-menu .avatar {
+    border-radius: 2rem;
+    width: 4rem;
+    height: 4rem;
+  }
+</style>

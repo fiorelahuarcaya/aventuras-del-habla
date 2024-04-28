@@ -74,6 +74,8 @@
         <input
           type="password"
           id="password"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W])"
+          title="La contraseña debe tener al menos 8 caracteres, incluyendo al menos un número, una mayúscula, una minúscula y un símbolo especial."
           bind:value={passwordInput}
           required
         />
