@@ -289,7 +289,7 @@ export type Database = {
           id_profile: string;
           id_user: string;
           last_name: string;
-          role: string;
+          role: string | null;
         };
         Insert: {
           avatar_url?: string | null;
@@ -300,7 +300,7 @@ export type Database = {
           id_profile?: string;
           id_user: string;
           last_name: string;
-          role: string;
+          role?: string;
         };
         Update: {
           avatar_url?: string | null;
