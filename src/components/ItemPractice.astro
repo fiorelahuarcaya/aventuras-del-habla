@@ -1,6 +1,5 @@
 ---
 import "../css/base.css";
-import WomanFarmer from "./svgs/WomanFarmer.astro";
 import Starts from "./svgs/starts.astro";
 
 export interface Props {
@@ -20,6 +19,7 @@ const { title_practice, description_practice, id_evaluation } = Astro.props;
     <h3>{title_practice}</h3>
     <div class="descrption">
       {description_practice}
+
       <a href={"/practice/" + id_evaluation} class="btn">Iniciar</a>
     </div>
   </div>
