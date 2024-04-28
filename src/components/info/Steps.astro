@@ -1,0 +1,129 @@
+---
+import SimpleLogin from "../svgs/SimpleLogin.astro";
+---
+
+<div class="steps" id="steps">
+  <div class="wrapper">
+    <h2>
+      ¡Aprende jugando! <span> ¡es muy fácil!</span>
+    </h2>
+
+    <div class="content">
+      <SimpleLogin />
+
+      <div class="steps-list">
+        <div class="step-item">
+          <div class="number">
+            <svg
+              width="24"
+              height="90"
+              viewBox="0 0 24 90"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="24" height="24" rx="12" fill="#3f924a"></rect>
+              <path
+                d="M13.8302 7.31818V17.5H11.6775V9.36151H11.6178L9.28613 10.8232V8.91406L11.8067 7.31818H13.8302Z"
+                fill="#F4F4F4"></path>
+              <line x1="11.5" y1="90" x2="11.5" y2="24" stroke="#3f924a"></line>
+            </svg>
+          </div>
+          <p>
+            Haz clic en <a href="/login"> LOGIN</a>, en caso de no tener una cuenta dale click a <a href="/register"> REGÍSTRATE</a>
+          </p>
+        </div>
+
+        <div class="step-item">
+          <div class="number">
+            <svg
+              width="10"
+              height="90"
+              viewBox="0 0 10 90"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="5" cy="4.5" r="4.5" fill="#3f924a"></circle>
+              <line x1="4.5" y1="90" x2="4.5" y2="9" stroke="#3f924a"></line>
+            </svg>
+          </div>
+          <p>
+            Vaya a los servicios disponibles y elija el que se adecúe a sus
+            necesidades.
+          </p>
+        </div>
+
+        <div class="step-item">
+          <div class="number">
+            <svg
+              width="10"
+              height="90"
+              viewBox="0 0 10 90"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="5" cy="4.5" r="4.5" fill="#3f924a"></circle>
+              <line x1="4.5" y1="90" x2="4.5" y2="9" stroke="#3f924a"></line>
+            </svg>
+          </div>
+          <p>Registra tu medio de pago y espera la activación.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .steps .wrapper{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    
+    .steps {
+      padding: 56px 0px;
+      background-color: var(--primary-50);
+    }
+
+    .steps h2 {
+      font-size: 32px;
+      margin-bottom: 48px;
+      color: var(--primary-600);
+    }
+
+    .steps h2 span {
+      color: var(--secondary-500);
+      font-weight: 600;
+    }
+
+    .steps .content {
+      display: flex;
+      flex-direction: row;
+      gap: 4rem;
+
+      align-items: center;
+      justify-content: center;
+    }
+
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .steps-list .step-item {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      min-height: 5rem;
+    }
+
+    .step-item .number {
+      width: 1.5rem;
+      text-align: center;
+    }
+
+    .step-item p {
+      max-width: 30rem;
+    }
+  </style>
+</div>
