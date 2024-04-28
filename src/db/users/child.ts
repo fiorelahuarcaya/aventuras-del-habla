@@ -1,4 +1,5 @@
 import { supabase } from "../client";
+import { insertDefaultEvaluations } from "../evaluation";
 
 export const insertChildInfo = async (
   id_parent: string,
@@ -17,6 +18,10 @@ export const insertChildInfo = async (
     if (error) {
       return { data, error: true, message: error.message };
     }
+
+    // Insert default evaluations
+    const [{ id_child: idChild }] = data;
+    await insertDefaultEvaluations(idChild);
 
     return { data, error: false };
   } catch (error) {
